@@ -1,7 +1,7 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>Probandooooooooooooooooo</div>
+    <main className="flex items-center justify-center h-screen">
+      <h1 className="text-3xl font-bold">Página de Inicio</h1>
+    </main>
   );
 }
