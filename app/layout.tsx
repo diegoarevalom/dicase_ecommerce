@@ -13,7 +13,7 @@ export default function RootLayout({
 
   const pathname = usePathname();
 
-  const hideHeader = pathname.startsWith('/auth');
+  const hideHeader = pathname.startsWith('/auth') || pathname.startsWith('/legal');
 
   return (
     <html lang="es">
