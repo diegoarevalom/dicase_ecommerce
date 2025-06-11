@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, FormEvent, ChangeEvent } from "react";
 import { useRouter } from 'next/navigation';
 
-export default function login(){
+export default function register(){
 
     const [formData, setFormData] = useState({
         name: "",

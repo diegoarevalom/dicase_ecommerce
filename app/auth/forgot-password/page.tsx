@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, FormEvent } from "react";
 
-export default function login(){
+export default function forgotPassword(){
 
     // Estado para manejar el correo electrónico
     const [email, setEmail] = useState("");
