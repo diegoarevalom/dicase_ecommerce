@@ -5,7 +5,7 @@ export default function terms(){
             <p className="text-3xl font-bold">TÉRMINOS Y CONDICIONES</p>
             <p className="text-lg py-3">Última actualización: [18/05/2025]</p>
 
-            <p className="text-lg">
+            <div className="text-lg">
             Bienvenido a Dicase. Al acceder o usar nuestro sitio web, aceptas estos Términos y Condiciones. Si no estás de acuerdo con alguna parte, por favor no uses este sitio.
 
             <p className="font-bold mt-5">1. Uso del sitio</p>
@@ -31,7 +31,7 @@ export default function terms(){
 
             <p className="font-bold mt-5">8. Modificaciones</p>
             Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso del sitio después de dichos cambios implica la aceptación de los mismos.
-            </p>
+            </div>
         </div>
 
     );

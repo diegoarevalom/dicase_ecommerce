@@ -5,7 +5,7 @@ export default function privacy(){
             <p className="text-3xl font-bold">POLÍTICA DE PRIVACIDAD</p>
             <p className="text-lg py-3">Última actualización: [18/05/2025]</p>
 
-            <p className="text-lg">
+            <div className="text-lg">
             En Dicase, valoramos tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información.
                 <p className="font-bold mt-5">1. Información que recopilamos</p>
                 <ul className="list-disc pl-10">
@@ -33,7 +33,7 @@ export default function privacy(){
 
                 <p className="font-bold mt-5">6. Cambios a esta política</p>
                 Podemos actualizar esta política en cualquier momento. Te avisaremos por este medio si hay cambios importantes.
-            </p>
+            </div>
         </div>
 
     );
