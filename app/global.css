@@ -1,2 +1,96 @@
 @import "tailwindcss";
 
+/* Definicion de la variable dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Definicion de las variables de color */
+
+
+/* Colores por defecto */
+:root {
+  /* Fondos */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f8f8;
+  --color-background-header: #DDD0C8;
+  --color-background-footer: #E8E8E8;
+
+  /* Textos */
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-text-header: #333333;
+  --color-text-footer: #333333;
+  --color-text-accent: #ff4500;
+  --color-text-link: #007bff;
+
+  /* Bordes y Separadores */
+  --color-border-primary: #e0e0e0;
+  --color-border-accent: #ff4500;
+
+  /* Elementos interactivos (botones, iconos) */
+  --color-button-primary-bg: #ff4500;
+  --color-button-primary-text: #ffffff;
+  --color-icon-primary: #666666;
+  --color-icon-active: #ff4500;
+}
+
+/* DARK MODE */
+
+@layer base {
+  .dark:root {
+    /* Fondos */
+    --color-background-primary: #121212;
+    --color-background-secondary: #1e1e1e;
+    --color-background-header: #282828;
+    --color-background-footer: #1a1a1a;
+
+    /* Textos */
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-text-header: #ffffff;
+    --color-text-footer: #b0b0b0;
+    --color-text-accent: #ffa500;
+    --color-text-link: #82a8ff;
+
+    /* Bordes y Separadores */
+    --color-border-primary: #333333;
+    --color-border-accent: #ffa500;
+
+    /* Elementos interactivos */
+    --color-button-primary-bg: #e65c00;
+    --color-button-primary-text: #ffffff;
+    --color-icon-primary: #b0b0b0;
+    --color-icon-active: #ffa500;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+  }
+
+  header {
+    background-color: var(--color-background-header);
+    color: var(--color-text-header);
+  }
+
+  footer {
+    background-color: var(--color-background-footer);
+    color: var(--color-text-footer);
+  }
+
+  a {
+    color: var(--color-text-link);
+  }
+
+  a:hover {
+    color: var(--color-text-accent);
+  }
+
+  /* Si tienes un main o algún contenedor principal */
+  main {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+  }
+}

@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react'
 import './global.css'
 import Header from '@/src/components/layout/header';
+import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({
   children,
@@ -8,12 +11,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
-        {/* Renderizado del header */}
-        <Header />
+        <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
+          {/* Renderizado del header */}
+          <Header />
 
-        {children}
+          {children}
+        </ThemeProvider>
+
       </body>
     </html>
   );
