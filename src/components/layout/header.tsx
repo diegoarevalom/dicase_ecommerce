@@ -25,10 +25,7 @@ function Header() {
   // Colores de borde y texto del searchbar
   const searchBarBgColor = mounted && theme === 'dark' ? '#1e1e1e' : '#DDD0C8';
   const searchBarTextColor = mounted && theme === 'dark' ? '#E0E0E0' : '#000000';
-  const searchBarPlaceholderColor = mounted && theme === 'dark' ? '#999999' : '#a0a0a0';
   // Colores del header e iconos favoritos/carrito/perfil
-  const headerBgColor = 'var(--color-background-header)';
-  const headerTextColor = 'var(--color-text-header)';
 
 
   return (
