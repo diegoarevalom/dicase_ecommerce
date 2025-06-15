@@ -2,14 +2,20 @@
 
 import React from 'react'
 import './global.css'
-import Header from '@/src/components/layout/header';
 import { ThemeProvider } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import Header from '@/src/components/layout/header';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const pathname = usePathname();
+
+  const hideHeader = pathname.startsWith('/auth') || pathname.startsWith('/legal');
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body>
@@ -19,7 +25,6 @@ export default function RootLayout({
 
           {children}
         </ThemeProvider>
-
       </body>
     </html>
   );

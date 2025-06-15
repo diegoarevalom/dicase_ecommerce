@@ -1,12 +1,7 @@
-import React from 'react'
-import Contact from './contact/page'
-
-function App() {
+export default function HomePage() {
   return (
-    <>
-      <Contact />
-    </>
-  )
+    <main className="flex items-center justify-center h-screen">
+      <h1 className="text-3xl font-bold">Página de Inicio</h1>
+    </main>
+  );
 }
-
-export default App
