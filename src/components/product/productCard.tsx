@@ -1,15 +1,8 @@
-type ProductCardProps = {
-  id: string;
-  type: string;
-  category: string;
-  image: string;
-  name: string;
-  servings: number;
-  price: number;
-  slug: string; // Para navegación tipo /products/creatina-raw
-};
-
+import React from "react";
 import Link from "next/link";
+import { Product } from "../../types/product";
+
+type ProductCardProps = Product;
 
 const ProductCard = ({ id, name, image, price, slug, servings }: ProductCardProps) => {
 
