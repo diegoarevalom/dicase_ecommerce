@@ -2,7 +2,13 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='bg-[#E8E8E8] dark:bg-[#333] text-white min-h-screen px-4 sm:px-6 lg:px-8'>
+    <div className='bg-[#E8E8E8] dark:bg-[#333] text-white min-h-screen px-4 py-8 sm:px-6 lg:px-8'>
+      <div className='flex items-center space-x-2 text-xl'>
+        <a href="/home" className='text-black dark:text-white'><span className='font-bold'>Inicio</span></a>
+        <span className='font-bold text-black dark:text-white'>{'>'}</span>
+        <span className='text-black dark:text-white'>Quienes somos</span>
+      </div>
+
       <div className="max-w-4-xl mx-auto sm:px-6 lg:px-8 py-8">
 
       </div>
