@@ -12,5 +12,7 @@ export type Product = {
   servings: number;
   flavours: string[];
   price: number;
+  onSale: boolean;
+  discount: number;
   slug: string;
 };

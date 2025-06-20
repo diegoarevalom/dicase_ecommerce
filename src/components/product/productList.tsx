@@ -6,10 +6,11 @@ type Props = {
   selectedTypes: string[];
   selectedCategories: string[];
   maxPrice: number;
+  onlyOnSale?: boolean;
   onFilteredCountChange?: (count: number) => void;
 };
 
-export default function ProductList({ selectedTypes, selectedCategories, maxPrice, onFilteredCountChange }: Props) {
+export default function ProductList({ selectedTypes, selectedCategories, maxPrice, onlyOnSale = false, onFilteredCountChange }: Props) {
 
 
   //Para agrupar el tipo de Tabletas y Capsulas
@@ -27,11 +28,18 @@ export default function ProductList({ selectedTypes, selectedCategories, maxPric
 
   const realTypes = resolveTypes(selectedTypes);
 
-  const filteredProducts = mockProducts.filter((product) =>
-    (realTypes.length === 0 || realTypes.includes(product.type ?? "")) &&
-    (selectedCategories.length === 0 || selectedCategories.includes(product.category ?? "")) &&
-    product.price <= maxPrice
-  );
+   const filteredProducts = mockProducts.filter((product) => {
+    const finalPrice = product.onSale && product.discount
+      ? product.price * (1 - product.discount)
+      : product.price;
+
+    return (
+      (realTypes.length === 0 || realTypes.includes(product.type ?? "")) &&
+      (selectedCategories.length === 0 || selectedCategories.includes(product.category ?? "")) &&
+      finalPrice <= maxPrice &&
+      (!onlyOnSale || product.onSale === true)
+    );
+  });
 
   useEffect(() => {
     onFilteredCountChange?.(filteredProducts.length);

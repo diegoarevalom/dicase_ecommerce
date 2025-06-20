@@ -9,6 +9,7 @@ type Props = {
   product: Product;
 };
 
+
 export default function ProductDetails({ product }: Props) {
 
     const images = [product.image, ...(product.images ?? [])];
@@ -38,7 +39,9 @@ export default function ProductDetails({ product }: Props) {
 
     const [quantity, setQuantity] = useState(1);
     const decrease = () => setQuantity((q) => Math.max(1, q - 1));
-    const increase = () => setQuantity((q) => q + 1)
+    const increase = () => setQuantity((q) => q + 1);
+
+    const finalPrice = product.onSale && product.discount ? product.price * (1 - product.discount) : product.price;
 
   return (
     <div className="px-6 py-6 space-y-6">
@@ -136,7 +139,16 @@ export default function ProductDetails({ product }: Props) {
               ))}
             </select>
 
-            <p className="text-2xl font-semibold text-black">Precio: ${product.price.toLocaleString()}</p>
+            <p className="text-2xl font-semibold text-red-600">
+              {product.onSale && product.discount ? (
+                <>
+                  <span className="line-through text-gray-500 mr-2">${product.price.toLocaleString('es-CL')}</span>
+                  <span>${finalPrice.toLocaleString('es-CL')}</span>
+                </>
+              ) : (
+                <>${product.price.toLocaleString('es-CL')}</>
+              )}
+            </p>
 
             <div className="flex items-center gap-4 mt-4">
                 {/* Controles cantidad */}
@@ -151,7 +163,7 @@ export default function ProductDetails({ product }: Props) {
               </div>
               {/* Subtotal */}
               <p className="text-lg font-semibold ml-1">
-                Subtotal: ${ (product.price * quantity).toLocaleString() }
+                Subtotal: ${ (finalPrice * quantity).toLocaleString('es-CL') }
               </p>
             </div>
             

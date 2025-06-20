@@ -17,7 +17,6 @@ function Snack() {
             <p className="text-4xl font-bold py-5">Snacks fitness para nutrirte en cualquier momento</p>
             <p className="text-2xl py-5 ml-30 mr-30 mt-3">Disfruta de opciones saludables, prácticas y sabrosas para mantener tu energía entre comidas o después del entrenamiento.</p>
             <p className="text-2xl py-5 ml-30 mr-30">Barras proteicas, comida saludable y otros complementos, pensados para apoyar tu estilo de vida activo.</p>
-
         </div>
 
         <div className="ml-30 mr-30 px-6 py-8">

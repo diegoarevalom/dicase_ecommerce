@@ -27,6 +27,8 @@ export const products: Product[] = [
     servings: 65,
     flavours: ["Chocolate", "Vainilla", "Fresa"],
     price: 49990,
+    onSale: true,
+    discount: 0.3,
     slug: "protein-ration-whey",
   },
   {
@@ -43,6 +45,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: true,
+    discount: 0.2,
     slug: "creatina-raw",
   },
   {
@@ -59,6 +63,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: false,
+    discount: 0,
     slug: "producto-2",
   },
   {
@@ -75,6 +81,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: false,
+    discount: 0,
     slug: "producto-3",
   },
   {
@@ -91,6 +99,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: false,
+    discount: 0,
     slug: "producto-4",
   },
   {
@@ -107,6 +117,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: false,
+    discount: 0,
     slug: "producto-5",
   },
   {
@@ -123,6 +135,8 @@ export const products: Product[] = [
     servings: 30,
     flavours: [],
     price: 27990,
+    onSale: false,
+    discount: 0,
     slug: "producto-6",
   },
 ];
